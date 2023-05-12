@@ -80,3 +80,5 @@
     SHOW tables;
     DESCRIBE `teachers`;
     SELECT `phone` FROM `teachers` WHERE `phone` IS NULL;
+    //oppure in alternativa per ottenere il numero degli insegnanti senza tutta la lista
+    SELECT COUNT(*) FROM `teachers` WHERE `phone` IS NULL;
