@@ -72,3 +72,11 @@
     USE 91_database;
     SHOW tables;
     SELECT COUNT(*) FROM `departments`;
+
+8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+
+    SHOW databases;
+    USE 91_database;
+    SHOW tables;
+    DESCRIBE `teachers`;
+    SELECT `phone` FROM `teachers` WHERE `phone` IS NULL;
