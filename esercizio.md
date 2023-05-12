@@ -25,12 +25,23 @@
     USE 91_database;
     SHOW tables;
     DESCRIBE `courses`;
-    SELECT * FROM `courses` WHERE `cfu` > 10;
+    SELECT \* FROM `courses` WHERE `cfu` > 10;
 
-3. Selezionare tutti gli studenti che hanno più di 30 anni
+3.  Selezionare tutti gli studenti che hanno più di 30 anni
 
     SHOW databases;
     USE 91_database;
     SHOW tables;
     DESCRIBE `students`;
-    SELECT * FROM `students` WHERE YEAR(CURDATE()) - YEAR(`date_of_birth`) > 30;
+    SELECT \* FROM `students` WHERE YEAR(CURDATE()) - YEAR(`date_of_birth`) > 30;
+
+4.  Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
+    laurea (286)
+
+    SHOW databases;
+    USE 91_database;
+    SHOW tables;
+    DESCRIBE `courses`;
+    SELECT `year` FROM `courses`; //per vedere come sono scritti i dati
+    SELECT `period` FROM `courses`; //per vedere come sono scritti i dati
+    SELECT `year`,`period` FROM courses WHERE `year` = 1 AND period = 'I semestre';
