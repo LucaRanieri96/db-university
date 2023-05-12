@@ -56,3 +56,12 @@
     SELECT `date` FROM `exams`; //per vedere come sono scritti i dati
     SELECT `hour` FROM `exams`; //per vedere come sono scritti i dati
     SELECT `date`,`hour` FROM `exams` WHERE `date` = '2020-06-20' AND `hour` >= '14:00';
+
+6. Selezionare tutti i corsi di laurea magistrale (38)
+
+    SHOW databases;
+    USE 91_database;
+    SHOW tables;
+    DESCRIBE `degrees`;
+    SELECT `level` FROM `degrees`; //per vedere come sono scritti i dati
+    SELECT `level` FROM `degrees` WHERE `level` LIKE 'magistrale';
