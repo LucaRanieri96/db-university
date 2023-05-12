@@ -25,4 +25,12 @@
     USE 91_database;
     SHOW tables;
     DESCRIBE `courses`;
-    SELECT \* FROM `courses` WHERE `cfu` > 10;
+    SELECT * FROM `courses` WHERE `cfu` > 10;
+
+3. Selezionare tutti gli studenti che hanno più di 30 anni
+
+    SHOW databases;
+    USE 91_database;
+    SHOW tables;
+    DESCRIBE `students`;
+    SELECT * FROM `students` WHERE YEAR(CURDATE()) - YEAR(`date_of_birth`) > 30;
