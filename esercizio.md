@@ -65,3 +65,10 @@
     DESCRIBE `degrees`;
     SELECT `level` FROM `degrees`; //per vedere come sono scritti i dati
     SELECT `level` FROM `degrees` WHERE `level` LIKE 'magistrale';
+
+7. Da quanti dipartimenti è composta l'università? (12)
+
+    SHOW databases;
+    USE 91_database;
+    SHOW tables;
+    SELECT COUNT(*) FROM `departments`;
